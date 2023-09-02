@@ -1,3 +1,4 @@
+#!/usr/bin/Node
 /*
 A script that prints “JavaScript is amazing”:
 */
