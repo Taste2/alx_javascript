@@ -9,5 +9,5 @@ const java_ = 'JavaScript is amazing';
 const progLanguages = [c_, python_, java_];
 
 for (let i = 0; i < 3; i++) {
-    console.log(progLanguages[i]);
+  console.log(progLanguages[i]);
 }
