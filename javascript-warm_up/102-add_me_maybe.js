@@ -4,6 +4,8 @@ A function that increments and calls a function.
 */
 
 exports.addMeMaybe = function (number, theFunction) {
-  number++;
+  while (number) {
+    number++; 
+  }
   theFunction();
 };
