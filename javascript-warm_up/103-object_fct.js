@@ -9,11 +9,12 @@ const myObject = {
 };
 console.log(myObject);
 
-function incr () {
- this.value += 1;
+myObject.incr = function () {
+  this.value += 1;
+  this.incr = function () {
+  this.value += 1;
+  }
 }
-
-myObject.incr = incr;
 
 myObject.incr();
 console.log(myObject);
