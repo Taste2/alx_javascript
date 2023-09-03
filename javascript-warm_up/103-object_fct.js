@@ -11,9 +11,12 @@ console.log(myObject);
 
 myObject.incr = function () {
   this.value += 1;
-  this.incr = function () {
-  this.value += 1;
-  }
+}
+
+myObject.incr.display = '[Function]';
+
+myObject.incr.toString = function () {
+  return this.display;
 }
 
 myObject.incr();
