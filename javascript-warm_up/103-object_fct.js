@@ -13,12 +13,6 @@ myObject.incr = function () {
   this.value += 1;
 }
 
-myObject.incr.display = '[Function]';
-
-myObject.incr.toString = function () {
-  return this.display;
-}
-
 myObject.incr();
 console.log(myObject);
 myObject.incr();
