@@ -12,9 +12,9 @@ console.log(myObject);
 myObject = {
   type: 'object',
   value: 12,
-  incr: function () {
+  incr () {
     myObject.value += 1;
-  }
+  },
 };
 
 myObject.incr();
