@@ -5,7 +5,7 @@ A function that increments and calls a function.
 
 exports.addMeMaybe = function (number, theFunction) {
   while (number) {
-    number++; 
+    number++;
+    theFunction();
   }
-  theFunction();
 };
