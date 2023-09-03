@@ -10,7 +10,10 @@ const myObject = {
 console.log(myObject);
 
 function incr () {
- this.value += 1; 
+ this.value += 1;
+ this.toString = function () {
+    return `{ type: '${this.type}', value: ${this.value}, incr: [Function] }`;
+  };
 }
 
 myObject.incr = incr;
