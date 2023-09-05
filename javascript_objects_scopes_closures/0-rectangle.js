@@ -7,4 +7,4 @@ class Rectangle {
     constructor () {}
 }
 
-module.export = Rectangle;
+module.exports = Rectangle;
