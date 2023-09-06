@@ -37,9 +37,4 @@ class Square extends Rectangle {
     }
 }
 
-const s1 = new Square(4);
-console.log(s1);
-console.log(s1.width);
-console.log(s1.height);
-
 module.exports = Square;
