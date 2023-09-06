@@ -34,8 +34,12 @@ class Square extends Rectangle {
 
     constructor (size) {
         super(size, size);
-        this.size = size;
     }
 }
+
+const s1 = new Square(4);
+console.log(s1);
+console.log(s1.width);
+console.log(s1.height);
 
 module.exports = Square;
