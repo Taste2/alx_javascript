@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
 //import class Square
-const Square = require ('./5-square');
+const Square_ = require ('./5-square');
 
 //Square inherits form Square
-class Square extends Square {
+class Square extends Square_ {
 
     constructor (size) {
         super(size, size);
@@ -24,5 +24,8 @@ class Square extends Square {
         }
     }
 }
+const s1 = new Square(4);
+s1.charPrint();
 
+s1.charPrint('C');
 module.exports = Square;
