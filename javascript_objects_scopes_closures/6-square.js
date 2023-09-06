@@ -11,9 +11,9 @@ class Square extends Square_ {
     }
 
     charPrint(c) {
-        if (c === 'C') {
+        if (c) {
             for (let i = 1; i <= this.height; i++) {
-                const rect_c = 'C'.repeat(this.width);
+                const rect_c = c.repeat(this.width);
                 console.log(rect_c);
             }
         } else {
