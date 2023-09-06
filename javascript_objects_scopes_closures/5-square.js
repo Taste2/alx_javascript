@@ -32,11 +32,10 @@ class Rectangle {
 
 class Square extends Rectangle {
 
-    constructor (width, height, size) {
-        super(width, height);
+    constructor (size) {
+        super(size, size);
         this.size = size;
     }
 }
 
-module.exports = Rectangle;
-module.exports = Square;
+module.exports = {Rectangle, Square};
