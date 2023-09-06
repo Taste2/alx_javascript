@@ -1,6 +1,9 @@
 #!/usr/bin/node
+
+//import class Square
 const Square = require ('./5-square');
 
+//Square inherits form Square
 class Square extends Square {
 
     constructor (size) {
