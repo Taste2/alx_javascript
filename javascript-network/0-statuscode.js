@@ -8,5 +8,5 @@ const url = process.argv[2];
 
 // make a GET request
 request(url, function (response) {
-    console.log('code:', response.satusCode)
+    console.log('code:', response.statusCode)
 })
