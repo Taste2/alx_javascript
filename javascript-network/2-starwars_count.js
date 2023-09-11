@@ -16,7 +16,7 @@ request
 .on('data', function (data) {
     response = JSON.parse(data);
     let count_ = 0;
-    for(let i = 1; i <= response.films.length; 1++) {
+    for(let i = 1; i <= response.films.length; i++) {
         count_++;
     }
     console.log(count_);
