@@ -1,8 +1,6 @@
 #!/usr/bin/node
 
 // import request
-const { isUtf8 } = require('buffer');
-const { parse } = require('path');
 const request = require('request');
 
 
