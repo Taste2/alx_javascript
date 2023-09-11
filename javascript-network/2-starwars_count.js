@@ -11,7 +11,7 @@ const parts = [];
 request
 .get(url+18, {encoding: 'utf-8'})
 .on('data', function (data) {
-    parts.push(data)
+    parts.push(data);
 })
 .on('complete', function () {
     response = JSON.parse(parts);
