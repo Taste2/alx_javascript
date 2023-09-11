@@ -15,6 +15,6 @@ request
 })
 .on('complete', function () {
     response = JSON.parse(parts);
-    const count_ = response.films.length;
+    const count_ = response.films;
     console.log(count_);
 })
