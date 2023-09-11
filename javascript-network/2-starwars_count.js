@@ -12,6 +12,6 @@ request
 .get(url+18, {encoding: 'utf-8'})
 .on('data', function (data) {
     response = JSON.parse(data);
-    const count_ = response.films.length;
+    const count_ = response.results.films.length;
     console.log(count_);
 })
