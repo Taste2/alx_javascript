@@ -10,10 +10,14 @@ const request = require('request');
 const id = process.argv[2];
 const url = 'https://swapi-api.alx-tools.com/api/films/'+id;
 
+parts = [];
 // make a GET request
 request
 .get(url, {encoding: 'utf-8'})
 .on('data', function (data) {
-    const response = JSON.parse(data)
+    parts.push(data);
+})
+.on('complete', function () {
+    const response = JSON.parse(parts)
     console.log(response.title)
 })
