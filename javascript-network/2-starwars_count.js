@@ -14,7 +14,7 @@ request
     parts.push(data);
 })
 .on('complete', function () {
-    response = JSON.parse(parts);
+    response = parts;
     const count_ = response.films;
     console.log(count_);
 })
