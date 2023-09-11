@@ -9,7 +9,7 @@ const url = process.argv[2];
 const parts = [];
 // make a GET request
 request
-.get(url+18, {encoding: 'utf-8'})
+.get(url+ '/'+18, {encoding: 'utf-8'})
 .on('data', function (data) {
     parts.push(data);
 })
