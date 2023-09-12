@@ -13,4 +13,4 @@ url = process.argv[2];
 file_name = process.argv[3];
 
 //make request
-request.get(url, {encoding: 'utf-8'}).pipe(fs.createWriteStream(file_name));
+request.get(url).pipe(fs.createWriteStream(file_name));
