@@ -1,6 +1,7 @@
 const request = require('request');
 
-const apiUrl = 'https://swapi-api.alx-tools.com/api/films/3';
+ID = process.argv[2];
+const apiUrl = 'https://swapi-api.alx-tools.com/api/films/'+ID;
 const actors =[];
 
 request.get(apiUrl, (error, response, body) => {
