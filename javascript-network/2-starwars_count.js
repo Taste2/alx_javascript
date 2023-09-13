@@ -5,16 +5,24 @@ const request = require('request');
 
 
 // pass cmd line argument
-const url = process.argv[2];
+const url = 'https://swapi-api.alx-tools.com/api/films';
 const parts = [];
+const ID = 18
+const characterURL = 'https://swapi-api.alx-tools.com/api/people/'+ID
 // make a GET request
-request
-.get(url+ '/'+18, {encoding: 'utf-8'})
-.on('data', function (data) {
+request.get(url, {encoding: 'utf-8'})
+.on('data', (data) => {
     parts.push(data);
 })
-.on('complete', function () {
-    response = parts;
-    const count_ = response.films;
-    console.log(count_);
+.on('complete', () => {
+    const resp = JSON.parse(parts);
+    let num_films = 0;
+    resp.results.forEach(function (actor) {
+       actor.characters.forEach((act) => {
+        if (act.includes('https://swapi-api.alx-tools.com/api/people/18')){
+            num_films++;
+        }
+       })
+    }) 
+    console.log(num_films);
 })
