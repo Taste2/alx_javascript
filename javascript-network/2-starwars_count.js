@@ -5,10 +5,9 @@ const request = require('request');
 
 
 // pass cmd line argument
-const url = 'https://swapi-api.alx-tools.com/api/films';
+const url = process.argv[2];
 const parts = [];
-const ID = 18
-const characterURL = 'https://swapi-api.alx-tools.com/api/people/'+ID
+
 // make a GET request
 request.get(url, {encoding: 'utf-8'})
 .on('data', (data) => {
