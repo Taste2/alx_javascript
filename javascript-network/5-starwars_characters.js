@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const request = require('request');
 
 ID = process.argv[2];
