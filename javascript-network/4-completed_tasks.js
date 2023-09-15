@@ -1,9 +1,10 @@
 #!/usr/bin/node
 
+const { copyFileSync } = require('fs');
 const request = require('request');
 
-const apiUrl = process.argv[2];
-
+const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+const completedTask = [];
 request.get(apiUrl, (error, response, body) => {
   if (error) {
     console.error('Error:', error);
@@ -19,27 +20,24 @@ request.get(apiUrl, (error, response, body) => {
     // Parse the JSON response
     const todos = JSON.parse(body);
 
-    // Filter completed tasks
-    const completedTasks = todos.filter((todo) => todo.completed);
-
-    // Create an object to store the count of completed tasks for each user ID
-    const userCompletedTasks = {};
-
-    // Count completed tasks for each user
-    completedTasks.forEach((task) => {
-      const userId = task.userId;
-      if (userCompletedTasks[userId]) {
-        userCompletedTasks[userId]++;
-      } else {
-        userCompletedTasks[userId] = 1;
+    // an array of completed tasks
+    todos.forEach(function (complete) {
+      if (complete.completed) {
+        completedTask.push(complete);
       }
-    });
+    })
 
-    // Print the results
-    for (const userId in userCompletedTasks) {
-    
-      console.log(`{'${userId}': ${userCompletedTasks[userId]}}`);
-    }
+    const userCompleted = {};
+    completedTask.forEach(function (user) {
+      const userId = user.userId;
+      if (userCompleted[userId]) {
+        userCompleted[userId]++;
+      }
+      else {
+        userCompleted[userId] = 1;
+      }
+    })
+    console.log(userCompleted);
   } catch (e) {
     console.error('Error parsing JSON:', e);
   }
