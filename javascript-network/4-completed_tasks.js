@@ -3,7 +3,7 @@
 const { copyFileSync } = require('fs');
 const request = require('request');
 
-const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+const apiUrl = process.argv[2];
 const completedTask = [];
 request.get(apiUrl, (error, response, body) => {
   if (error) {
