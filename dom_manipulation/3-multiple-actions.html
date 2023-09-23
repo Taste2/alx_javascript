@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creating and Removing Elements</title>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    //grab the div element
+    const divElement = document.getElementById("container");
+    //create a p element and set content
+    const para = document.createElement("p");
+    para.innerHTML = "New paragraph";
+
+    //add the p element to the div element
+    divElement.appendChild(para)
+
+    //create abutton element, set content and append to div element
+    const btn = document.createElement("button");
+    btn.textContent = "Show/Hide paragraph";
+    divElement.appendChild(btn);
+
+    let isToggled = false;
+    //make button show or hide paragraph
+    btn.addEventListener('click', function () {
+        isToggled = !isToggled;
+
+        if (isToggled) {
+            para.style.display = "none";
+        } else {
+            para.style.display = "block"
+        }
+    })
+
+  </script>
+</body>
+</html>
