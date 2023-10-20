@@ -7,6 +7,7 @@ const request = require('request');
 // pass cmd line argument
 const url = process.argv[2];
 const parts = [];
+const characterId = 18;
 
 // make a GET request
 request.get(url, {encoding: 'utf-8'})
@@ -18,7 +19,7 @@ request.get(url, {encoding: 'utf-8'})
     let num_films = 0;
     resp.results.forEach(function (actor) {
        actor.characters.forEach((act) => {
-        if (act.includes('https://swapi-api.alx-tools.com/api/people/18')){
+        if (act.includes(characterId)){
             num_films++;
         }
        })
